@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Login | Admin Dashboard</title>
+    <title>Login | Admin Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     {{-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> --}}
@@ -21,15 +21,16 @@
                     <div class="mb-4">
                         {{-- <img class="brand" src="assets/img/bootstraper-logo.png" alt="bootstraper logo"> --}}
                     </div>
-                    <h6 class="mb-4 text-muted">Login to your account</h6>
-                    <form action="" method="">
+                    <h6 class="mb-4 text-muted">Login to your Admin account</h6>
+                    <form action="{{ route('admin.login.submit') }}" method="POST">
+                        @csrf
                         <div class="mb-3 text-start">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <input type="email" name="admin_email" class="form-control" placeholder="Enter your email" required>
                         </div>
                         <div class="mb-3 text-start">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" placeholder="Enter your password" required>
+                            <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
                         </div>
                         <div class="mb-3 text-start">
                             <div class="form-check">
@@ -47,7 +48,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     {{-- <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script> --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </body>

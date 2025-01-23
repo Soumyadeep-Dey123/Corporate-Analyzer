@@ -18,7 +18,7 @@
                             <img class="brand" src="assets/img/bootstraper-logo.png" alt="bootstraper logo">
                         </div>
                         <h6 class="mb-4 text-muted">Create new account</h6>
-                        <form action="" method="">
+                        <form action="{{ route('admin.signup.submit') }}" method="POST">
                             <div class="mb-3 text-start">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" class="form-control" placeholder="Enter your name" required>

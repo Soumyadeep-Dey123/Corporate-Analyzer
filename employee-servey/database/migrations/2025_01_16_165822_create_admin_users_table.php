@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('admin_users', function (Blueprint $table) {
             $table->id('admin_id');  // Primary key
             $table->string('admin_name');
-            $table->string('admin_email',191)->unique();
+            $table->string('admin_email', 191)->unique();
             $table->string('admin_phone');
+            $table->string('password'); // Add a password column
             $table->timestamps();  // Created at and updated at timestamps
         });
+        
     }
 
     /**

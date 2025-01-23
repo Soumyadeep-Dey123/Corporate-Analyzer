@@ -1,24 +1,22 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Blank Page | Bootstrap Simple Admin Template</title>
-        <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
-        <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
-        <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
-        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/master.css" rel="stylesheet">
-    </head>
-    
-    <body>
+@extends('admin.sections.base')
+
+@section('title') Home @endsection
+
+@section('stylesheets')
+<link rel="stylesheet" href="{{ asset('fontawesome/css/fontawesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('fontawesome/css/solid.min.css') }}">
+<link rel="stylesheet" href="{{ asset('fontawesome/css/brands.min.css') }}">
+<link rel="stylesheet" href="{{ asset('css/admin/master.css') }}">
+<link rel="stylesheet" href="{{ asset('css\admin\components\navbar\navbar-dropdowns.css') }}">
+<link rel="stylesheet" href="{{ asset('css\admin\components\sidebar\sidebar-default.css') }}">
+@endsection
+
     @section('content')   
         <div class="wrapper">
             <!-- sidebar navigation component -->
             <nav id="sidebar" class="active">
                 <div class="sidebar-header">
-                    <img src="assets/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo">
+                    {{-- <img src="assets/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo"> --}}
                 </div>
                 <ul class="list-unstyled components text-secondary">
                     <li>
@@ -75,10 +73,27 @@
                     </li>
                     <li>
                         <a href="#pagesmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-copy"></i>Pages</a>
+                        <h1>Admin Dashboard</h1>
+                            <ul>
+                                {{-- <li><a href="{{ route('admin.results') }}">Results</a></li> --}}
+                                {{-- <li><a href="{{ route('admin.welcome') }}">Welcome</a></li> --}}
+                                <li>
+                                    <form action="{{ route('admin.logout') }}" method="POST">
+                                        @csrf
+                                        <button type="submit">Logout</button>
+                                    </form>
+                                </li>
+                            </ul>
+
                         <ul class="collapse list-unstyled" id="pagesmenu">
                             <li>
-                                <a href="blank.html"><i class="fas fa-file"></i>Blank page</a>
+                                <a href="blank.html"><i class="fas fa-file"></i>Admin Dashboard</a>
                             </li>
+                            <form action="{{ route('admin.logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">Logout</button>
+                            </form>
+                            
                             <li>
                                 <a href="404.html"><i class="fas fa-info-circle"></i>404 Error page</a>
                             </li>
@@ -86,6 +101,10 @@
                                 <a href="500.html"><i class="fas fa-info-circle"></i>500 Error page</a>
                             </li>
                         </ul>
+                        <form action="{{ route('admin.logout') }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Logout</button>
+                        </form>
                     </li>
                     <li>
                         <a href="users.html"><i class="fas fa-user-friends"></i>Users</a>
@@ -125,7 +144,7 @@
                             <li class="nav-item dropdown">
                                 <div class="nav-dropdown">
                                     <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="fas fa-user"></i> <span>John Doe</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                        <i class="fas fa-user"></i> <span>Administrator</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                         <ul class="nav-list">
@@ -133,7 +152,12 @@
                                             <li><a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Messages</a></li>
                                             <li><a href="" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a></li>
                                             <div class="dropdown-divider"></div>
-                                            <li><a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                            <li><form action="{{ route('admin.logout') }}" method="POST" style="display: inline;">
+                                                @csrf
+                                                <button type="submit" class="dropdown-item" style="border: none; background: none; padding: 0; margin: 0;">
+                                                    <i class="fas fa-sign-out-alt"></i> Logout
+                                                </button>
+                                            </form></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -152,9 +176,3 @@
             </div>
         </div>
         @endsection
-        <script src="assets/vendor/jquery/jquery.min.js"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
-    
-</html>

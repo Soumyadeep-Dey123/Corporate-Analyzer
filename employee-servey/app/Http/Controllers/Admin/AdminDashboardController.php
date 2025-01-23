@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+// use Illuminate\Http\Request;
+
+class AdminDashboardController extends Controller
+{
+     // Show the admin dashboard
+     public function index()
+     {
+         return view('admin.dashboard'); // Matches dashboard.blade.php
+     }
+ 
+     // Show results page
+     public function results()
+     {
+         return view('admin.results'); // Matches results.blade.php
+     }
+ 
+     // Show welcome page
+     public function welcome()
+     {
+         return view('admin.welcome'); // Matches welcome.blade.php
+     }
+}
