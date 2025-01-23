@@ -15,7 +15,7 @@ use App\Http\Controllers\Admin\AdminDashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 // admin route

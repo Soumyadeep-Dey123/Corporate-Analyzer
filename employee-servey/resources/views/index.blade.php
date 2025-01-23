@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>survey-please answer this questions</title>
+    <title>Complete The Survey!</title>
 
     <!-- bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +24,8 @@
 <body class="bg-light   my-3 ">
     <div class="container mt-3 mt-lg-5">
         <header class="mb-4">
-            <h1 class="display-3 text-center ">Survey name</h1>
-            <h2 class=" lead text-center ">Subtitle for Survey name</h2>
+            <h1 class="display-3 text-center ">Employee Survey</h1>
+            <h2 class=" lead text-center ">Requested by your company</h2>
         </header>
         <main>
             <ul class="nav nav-tabs nav-justified">
@@ -116,84 +116,79 @@
 
                 </div>
                 <div id="step-2" class="tab-pane fade  pt-4 ">
-                    <h5 class="text-center my-2">Question #1: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolorum.</h5>
+                    <h5 class="text-center my-2">Question #1:  How would you rate the ease of accessing the Employee Survey Portal?</h5>
                     <div class="row my-3">
                         <div class="col-lg-6">
                             <figure class="figure">
                                 <img src="img/1600x900.png" class="figure-img img-fluid rounded" alt="img">
-                                <figcaptiin class="figure-caption">Lorem ipsum dolor sit.</figcaptiin>
+                                <figcaptiin class="figure-caption">Very Easy</figcaptiin>
                             </figure>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-check ">
                                 <input type="radio" id="answer-1" class="form-check-input " name="answer-1">
-                                <label for="answer-1" class="form-label">Answer-1</label>
+                                <label for="answer-1" class="form-label">Easy</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-2" class="form-check-input " name="answer-1">
-                                <label for="answer-2" class="form-label">Answer-2</label>
+                                <label for="answer-2" class="form-label">Neutral</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-3" class="form-check-input " name="answer-1">
-                                <label for="answer-3" class="form-label">Answer-3</label>
+                                <label for="answer-3" class="form-label">Difficult</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-4" class="form-check-input " name="answer-1">
-                                <label for="answer-4" class="form-label">Answer-4</label>
+                                <label for="answer-4" class="form-label">Very Difficult</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-5" class="form-check-input " name="answer-1">
                                 <label for="answer-5" class="form-label">
                                     <input type="text" class="form-control form-control-sm" size="30">
                                 </label>
-                                <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sed numquam alias dolores?</p>
+                                {{-- <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed numquam alias dolores?</p> --}}
 
                             </div>
                         </div>
                     </div>
                     <hr>
-                    <h5 class="text-center my-2">Question #2: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolorum.</h5>
+                    <h5 class="text-center my-2">Question #2: Which feature of the Employee Survey Portal do you find most useful?</h5>
                     <div class="row my-3">
                         <div class="col-lg-6">
                             <figure class="figure">
                                 <img src="img/1600x900.png" class="figure-img img-fluid rounded" alt="img">
-                                <figcaptiin class="figure-caption">Lorem ipsum dolor sit.</figcaptiin>
+                                <figcaptiin class="figure-caption">Lorem ipsum dolor sit amet.</figcaptiin>
                             </figure>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-check ">
                                 <input type="radio" id="answer-6" class="form-check-input " name="answer-2">
-                                <label for="answer-6" class="form-label">Answer-1</label>
+                                <label for="answer-6" class="form-label">Advanced analytics</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-7" class="form-check-input " name="answer-2">
-                                <label for="answer-7" class="form-label">Answer-2</label>
+                                <label for="answer-7" class="form-label">Real-time feedback collection</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-8" class="form-check-input " name="answer-2">
-                                <label for="answer-8" class="form-label">Answer-3</label>
+                                <label for="answer-8" class="form-label">Data export options (e.g., CSV, PDF)</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-9" class="form-check-input " name="answer-2">
-                                <label for="answer-9" class="form-label">Answer-4</label>
+                                <label for="answer-9" class="form-label">Email notifications for survey links</label>
                             </div>
                             <div class="form-check ">
                                 <input type="radio" id="answer-10" class="form-check-input " name="answer-2">
                                 <label for="answer-10" class="form-label">
                                     <input type="text" class="form-control form-control-sm" size="30">
                                 </label>
-                                <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sed numquam alias dolores?</p>
+                                {{-- <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed numquam alias dolores?</p> --}}
 
                             </div>
                         </div>
                     </div>
                     <hr>
-                    <h5 class="text-center my-2">Question #3: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Dolorum.</h5>
+                    <h5 class="text-center my-2">Question #3: How often do you think employee surveys should be conducted?</h5>
                     <div class="row my-3">
                         <div class="col-lg-6">
                             <figure class="figure">
@@ -204,27 +199,26 @@
                         <div class="col-lg-6">
                             <div class="form-check ">
                                 <input type="checkbox" id="answer-11" class="form-check-input " name="answer-3">
-                                <label for="answer-11" class="form-label">Answer-1</label>
+                                <label for="answer-11" class="form-label">Monthly</label>
                             </div>
                             <div class="form-check ">
                                 <input type="checkbox" id="answer-12" class="form-check-input " name="answer-4">
-                                <label for="answer-12" class="form-label">Answer-2</label>
+                                <label for="answer-12" class="form-label">Quaterly</label>
                             </div>
                             <div class="form-check ">
                                 <input type="checkbox" id="answer-13" class="form-check-input " name="answer-5">
-                                <label for="answer-13" class="form-label">Answer-3</label>
+                                <label for="answer-13" class="form-label">Bi-annually</label>
                             </div>
                             <div class="form-check ">
                                 <input type="checkbox" id="answer-14" class="form-check-input " name="answer-6">
-                                <label for="answer-14" class="form-label">Answer-4</label>
+                                <label for="answer-14" class="form-label">On-demand (whenever required)</label>
                             </div>
                             <div class="form-check ">
                                 <input type="checkbox" id="answer-15" class="form-check-input " name="answer-7">
                                 <label for="answer-15" class="form-label">
                                     <input type="text" class="form-control form-control-sm" size="30">
                                 </label>
-                                <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing
-                                    elit. Sed numquam alias dolores?</p>
+                                {{-- <p class="text-muted small mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed numquam alias dolores?</p> --}}
 
                             </div>
                         </div>
@@ -235,9 +229,9 @@
                 <div id="step-3" class="tab-pane fade my-3  pt-4 ">
                     <div class="row my-2">
                         <div class="col-lg-6">
-                            <h2 class="h5">Question #4: Lorem ipsum dolor sit ameo est dolquibusdam optio voluptas! Ex.
+                            <h2 class="h5">Question #4: The Employee Survey Portal is user-friendly and easy to navigate.
                             </h2>
-                            <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                            {{-- <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p> --}}
 
                         </div>
                         <div class="col-lg-6 ">
@@ -268,7 +262,7 @@
                                 </div>
                             </div>
                             <textarea class="form-control" rows="2"
-                                placeholder="write something for Ali ..."></textarea>
+                                placeholder="write something ..."></textarea>
 
 
 
@@ -281,9 +275,9 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-lg-6">
-                            <h2 class="h5">Question #5: Lorem ipsum dolor sit ameo est dolquibusdam optio voluptas! Ex.
+                            <h2 class="h5">Question #5: The survey questions are clear and relevant to my role and responsibilities.
                             </h2>
-                            <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                            {{-- <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p> --}}
 
                         </div>
                         <div class="col-lg-6 ">
@@ -313,8 +307,7 @@
                                     <label class="form-check-label" for="q5-ana">n/a</label>
                                 </div>
                             </div>
-                            <textarea class="form-control" rows="2"
-                                placeholder="write something for Ali ..."></textarea>
+                            {{-- <textarea class="form-control" rows="2" placeholder="write something..."></textarea> --}}
 
 
 
@@ -327,9 +320,9 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-lg-6">
-                            <h2 class="h5">Question #6: Lorem ipsum dolor sit ameo est dolquibusdam optio voluptas! Ex.
+                            <h2 class="h5">Question #6: The feedback process feels secure and maintains confidentiality.
                             </h2>
-                            <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                            {{-- <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p> --}}
 
                         </div>
                         <div class="col-lg-6 ">
@@ -356,8 +349,7 @@
                                     <label class="btn btn-outline-secondary" for="q6-ana">n/a</label>
                                 </div>
                             </div>
-                            <textarea class="form-control" rows="2"
-                                placeholder="write something for Ali ..."></textarea>
+                            {{-- <textarea class="form-control" rows="2" placeholder="write something..."></textarea> --}}
 
 
 
@@ -370,9 +362,9 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-lg-6">
-                            <h2 class="h5">Question #7: Lorem ipsum dolor sit ameo est dolquibusdam optio voluptas! Ex.
+                            <h2 class="h5">Question #7: The analytics and visualizations provided by the portal help improve decision-making.
                             </h2>
-                            <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                            {{-- <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p> --}}
 
                         </div>
                         <div class="col-lg-6 ">
@@ -399,8 +391,7 @@
                                     <label class="btn btn-outline-secondary" for="q7-ana">n/a</label>
                                 </div>
                             </div>
-                            <textarea class="form-control" rows="2"
-                                placeholder="write something for Ali ..."></textarea>
+                            {{-- <textarea class="form-control" rows="2" placeholder="write something for Ali ..."></textarea> --}}
 
 
 
@@ -413,9 +404,9 @@
                     </div>
                     <div class="row my-2">
                         <div class="col-lg-6">
-                            <h2 class="h5">Question #8: Lorem ipsum dolor sit ameo est dolquibusdam optio voluptas! Ex.
+                            <h2 class="h5">Question #8: I feel that my feedback is valued and acted upon effectively by the organization.
                             </h2>
-                            <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p>
+                            {{-- <p class="small">Lorem ipsum dolor sit. Lorem, ipsum dolor.</p> --}}
 
                         </div>
                         <div class="col-lg-6 ">
@@ -424,8 +415,7 @@
                                 <input type="range" max="5" min="1" class="form-range" name="q7-a">
                                 <span class="ms-3">5</span>
                             </div>
-                            <textarea class="form-control" rows="2"
-                                placeholder="write something for Ali ..."></textarea>
+                            {{-- <textarea class="form-control" rows="2" placeholder="write something for Ali ..."></textarea> --}}
 
 
 
