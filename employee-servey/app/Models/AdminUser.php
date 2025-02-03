@@ -28,6 +28,12 @@ class AdminUser extends Authenticatable
         'remember_token', // Include this if using Laravel's built-in authentication
     ];
 
+    /**
+     * Automatically hash the password before saving.
+     *
+     * @param string $value
+     * @return void
+     */
 
     public function setPasswordAttribute($value)
     {

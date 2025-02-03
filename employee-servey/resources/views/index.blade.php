@@ -417,14 +417,7 @@
                             </div>
                             {{-- <textarea class="form-control" rows="2" placeholder="write something for Ali ..."></textarea> --}}
 
-
-
-
-
                         </div>
-
-
-
                     </div>
                     <button type="submit" id="submitButton" class="btn btn-secondary my-4  d-block ms-auto">
                         Submit

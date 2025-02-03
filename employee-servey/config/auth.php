@@ -79,7 +79,7 @@ return [
         // Add the admin provider
         'admins' => [
             'driver' => 'eloquent',
-            'model' => App\Models\AdminUser::class, // Replace with your Admin model
+            'model' => App\Models\AdminUser::class, 
         ],
     ],
 

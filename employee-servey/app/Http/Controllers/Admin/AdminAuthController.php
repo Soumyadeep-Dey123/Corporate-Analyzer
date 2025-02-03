@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\AdminUser;
+
 
 class AdminAuthController extends Controller
 {
@@ -36,11 +38,6 @@ class AdminAuthController extends Controller
      }
  
      // Logout admin
-    //  public function logout()
-    //  {
-    //      Auth::guard('admin')->logout();
-    //      return redirect()->route('admin.login');
-    //  }
      public function logout(Request $request)
     {
         // Logout the admin user
@@ -53,7 +50,7 @@ class AdminAuthController extends Controller
         $request->session()->regenerateToken();
 
         // Redirect to the admin login page
-        return redirect()->route('admin.login')->with('status', 'You have been logged out.');
+        return redirect()->route('admin.login'); //->with('status', 'You have been logged out.');
     }
  
      // (Optional) Signup logic if needed
@@ -64,6 +61,22 @@ class AdminAuthController extends Controller
  
      public function signup(Request $request)
      {
-         // Add admin signup logic if required
+        $request->validate([
+            'admin_name' => 'required|string|max:255',
+            'admin_email' => 'required|email|unique:admin_users',
+            'admin_phone' => 'required|string|max:255',
+            'password' => 'required|min:8|confirmed',
+            'confirm' => 'accepted', // Ensures the checkbox is checked
+        ]);
+    
+        // Create a new admin user
+        AdminUser::create([
+            'admin_name' => $request->admin_name,
+            'admin_email' => $request->admin_email,
+            'admin_phone' => $request->admin_phone,
+            'password' => $request->password, // Automatically hashed via the mutator
+        ]);
+    
+        return redirect()->route('admin.dashboard')->with('success', 'Signup successful!');
      }
 }

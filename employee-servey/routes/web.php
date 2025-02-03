@@ -34,12 +34,16 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     // Public routes
     Route::get('/', function () {
+        if (auth('admin')->check()) { // Check if admin is authenticated
+            return redirect()->route('admin.dashboard'); // Redirect to dashboard
+        }
         return redirect()->route('admin.login');
     });
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
     Route::post('/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
     Route::get('/signup', [AdminAuthController::class, 'showSignupForm'])->name('admin.signup');
     Route::post('/signup', [AdminAuthController::class, 'signup'])->name('admin.signup.submit');
+    Route::get('/terms', function () { return view('admin.terms'); })->name('admin.terms');
 
     // Protected routes (require admin authentication)
     Route::middleware('admin')->group(function () {
@@ -47,5 +51,9 @@ Route::prefix('admin')->group(function () {
         Route::get('/results', [AdminDashboardController::class, 'results'])->name('admin.results');
         Route::get('/welcome', [AdminDashboardController::class, 'welcome'])->name('admin.welcome');
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+
     });
 });
+
+#company_logo add
