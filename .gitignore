@@ -1,0 +1,13 @@
+/.phpunit.cache
+
+/storage/*.key
+project_desc.txt
+
+Homestead.json
+Homestead.yaml
+
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
