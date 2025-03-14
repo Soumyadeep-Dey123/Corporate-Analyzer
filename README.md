@@ -188,10 +188,11 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). -->
 
 ## 🗺️ Roadmap
 
-- [x] Feature 1
-- [x] Feature 2
-- [ ] Upcoming feature 3
-- [ ] Future enhancement 4
+- [x] Creation of Admin Panel
+- [x] Addition of working features in the Admin Panel
+- [ ] Creation of Survey Form
+- [ ] Publishing version 1.0.0
+- [ ] Working on version 1.1.0
 
 ## 📄 License
 
