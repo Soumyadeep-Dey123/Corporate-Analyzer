@@ -2,7 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-10.x-FF2D20.svg)](https://laravel.com)
 [![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)]()
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
+<!-- [![License](https://img.shields.io/badge/License-MIT-blue.svg)]() -->
 
 A brief description of your project. Explain what problem it solves and what makes it unique. Keep this concise but informative.
 
@@ -195,7 +195,8 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). -->
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Corporate Analyser Non-Commercial License (CANCL) - see the [LICENSE](LICENSE) file for details**.  
+**Commercial use requires a separate license.** Contact the [author](#contact) for details.
 
 ## 📞 Contact
 
