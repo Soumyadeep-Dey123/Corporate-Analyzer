@@ -60,7 +60,7 @@ Monetizing the Software directly or indirectly.
 
 💰 Want to use this software commercially? Contact the Licensor to obtain a separate commercial license.
 
-📧 Contact: [My Contact Details](..README.md)
+📧 Contact: [My Contact Details](/README.md#contact)
 
 
 ---
