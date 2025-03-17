@@ -28,6 +28,10 @@
                         <label for="edit_phone" class="form-label">Company Phone</label>
                         <input type="text" class="form-control" id="edit_phone" name="company_phone" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="edit_address" class="form-label">Company Address</label>
+                        <input type="text" class="form-control" id="edit_address" name="company_address" required>
+                    </div>
                 </div>
 
                 <div class="modal-footer">

@@ -20,9 +20,18 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
-        <div class="col-md-12 col-lg-12">
+        <div class="col-md-12 col-lg-12 shadow">
                 <div class="card">
-                    <div class="card-header"><h3>Company List Table</h3></div>
+                    <div class="card-header"><h3>Company List Table</h3>
+                        @php
+                            $add_title = "Add New Company";
+                        @endphp
+                        <i class="fa " aria-hidden="true">
+                            <button type="button" class="fa-plus btn btn-primary" title="{{ $add_title }}" data-bs-toggle="modal" data-bs-target="#addCompanyModal">
+                                
+                            </button>
+                        </i>
+                    </div>
                     <div class="card-body">
                         <p class="card-title"></p>
                         <table class="table table-hover" id="dataTables-example" width="100%">
@@ -63,16 +72,20 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-warning edit-btn" 
+                                        @php
+                                        $edit_title = "Edit Company Details";
+                                        @endphp
+                                        <i class="fas" title="{{$edit_title}}"><button type="button" class="fas fa-edit btn btn-warning edit-btn" 
                                             data-bs-toggle="modal" 
                                             data-bs-target="#editModal"
                                             data-id="{{ $company->id }}"
                                             data-name="{{ $company->company_name }}"
                                             data-email="{{ $company->company_email }}"
                                             data-phone="{{ $company->company_phone }}"
-                                            data-status="{{ $company->company_phone }}">
-                                            Edit
+                                            data-address="{{ $company->company_address }}"
+                                            >
                                         </button>
+                                    </i>
                                     </td>
                                 </tr>
                                 @endforeach
@@ -87,6 +100,7 @@
 </div>
 </div>
 @include('admin.sections.company.company-modal')
+@include('admin.sections.company.company-add-modal')
 
 
 @endsection
@@ -106,11 +120,14 @@
             var name = button.getAttribute("data-name");
             var email = button.getAttribute("data-email");
             var phone = button.getAttribute("data-phone");
+            var address = button.getAttribute("data-address");
     
             document.getElementById("edit_id").value = id;
             document.getElementById("edit_name").value = name;
             document.getElementById("edit_email").value = email;
             document.getElementById("edit_phone").value = phone;
+            document.getElementById("edit_address").value = address;
+            
     
             document.getElementById("editForm").action = "{{ route('admin.companies.update', '') }}/" + id;
         });

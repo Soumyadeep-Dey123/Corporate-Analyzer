@@ -4,7 +4,7 @@
 
 @section('stylesheets') 
 <link rel="stylesheet" href="{{ asset('datatables/datatables.min.css') }}">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"> --}}
 {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" > --}}
 @endsection
 
@@ -32,6 +32,7 @@
                                     </div> --}}
                                     <!-- Insert the company filter section here -->
                                     @include('admin.sections.company.company-filter2')
+                                    <br>
                                     <div class="card-body">
                                         <p class="card-title"></p>
                                         <table class="table table-hover" id="dataTables-example" width="100%">
@@ -71,5 +72,34 @@
 @section('js-files') 
 <script src="{{ asset('datatables/datatables.min.js') }}"></script>
 <script src="{{ asset('js/admin/initiate-datatables.js') }}"></script>
+<script>
+    $(document).ready(function(){
+      // Simple search functionality for company checkboxes
+      $("#companySearch").on("keyup", function(){
+        var value = $(this).val().toLowerCase();
+        $("#companyCheckboxes .form-check").filter(function(){
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+      });
+      
+      // Placeholder actions for Apply/Clear Filter
+      $("#applyFilter").click(function(e){
+        e.preventDefault();
+        // Retrieve checked companies for further processing
+        var selected = [];
+        $(".company-checkbox:checked").each(function(){
+          selected.push($(this).val());
+        });
+        console.log("Selected companies:", selected);
+        // Implement further filtering logic here
+      });
+      
+      $("#clearFilter").click(function(e){
+        e.preventDefault();
+        $(".company-checkbox").prop("checked", false);
+      });
+    });
+  </script>
+  
 @endsection
 

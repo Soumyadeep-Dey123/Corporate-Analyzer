@@ -7,12 +7,12 @@
 
 
 @section('content')
-    <div class="wrapper">
         <div class="auth-content">
             <div class="card">
                 <div class="card-body text-center">
                     <div class="mb-4">
                         {{-- <img class="brand" src="assets/img/bootstraper-logo.png" alt="bootstraper logo"> --}}
+                        <img width="90" height="90" src="https://img.icons8.com/ios-glyphs/90/microsoft-admin--v2.png" alt="microsoft-admin--v2"/>
                         <!-- Flash Messages Section -->
                         @if (session('warning'))
                         <div class="alert alert-warning">
@@ -20,7 +20,8 @@
                         </div>
                         @endif
                     </div>
-                    <h6 class="mb-4 text-muted">Login to your Admin account</h6>
+                    <h3 class="mb-4 text-muted">Login to your Admin account</h3>
+                    <br>
                     <form action="{{ route('admin.login.submit') }}" method="POST">
                         @csrf
                         <div class="mb-3 text-start">
@@ -46,7 +47,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    @section('js-files')<script src="{{ asset('jquery/jquery.min.js') }}"></script> @endsection
-
+@section('js-files')
+<script src="{{ asset('jquery/jquery.min.js') }}"></script> @endsection
 @endsection

@@ -9,11 +9,19 @@
             <div class="auth-content">
                 <div class="card">
                     <div class="card-body text-center">
-                        <div class="mb-4">
-                            {{-- <img class="brand" src="assets/img/bootstraper-logo.png" alt="bootstraper logo"> --}}
-                        </div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <i class="fas fa-sign-in"></i>
                         <h6 class="mb-4 text-muted">Create new Admin account</h6>
                         <form action="{{ route('admin.signup.submit') }}" method="POST">
+                            @csrf
                             <div class="mb-3 text-start">
                                 <label for="name" class="form-label">Name</label>
                                 <input type="text" name="admin_name" class="form-control" placeholder="Enter your name" required>
@@ -37,7 +45,7 @@
                             
                             <div class="mb-3 text-start">
                                 <div class="form-check">
-                                  <input class="form-check-input" name="confirm" type="checkbox" value="" id="check1">
+                                  <input class="form-check-input" name="confirm" type="checkbox" value="1" id="check1">
                                   <label class="form-check-label" for="check1">
                                     I agree to the <a href="{{ route('admin.terms') }}" tabindex="-1">terms and policy</a>.
                                   </label>
@@ -51,5 +59,7 @@
             </div>
         @endsection
         
-    @section('js-files')<script src="{{ asset('jquery/jquery.min.js') }}"></script> @endsection
+    @section('js-files')
+    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+    @endsection
         

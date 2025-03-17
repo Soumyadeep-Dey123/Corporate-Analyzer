@@ -207,8 +207,9 @@ body {
 [7. Dashboard Cards / .card] 
 */
 .card {
-    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .04);
-    border: 1px solid #eaedf1;
+    /* box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .04); */
+    box-shadow: 1px 1px #919191;
+    border: 1.6px solid #cacaca;
     margin-bottom: 1.5rem;
     border-radius: 5.2px;
     overflow: hidden;

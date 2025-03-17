@@ -28,10 +28,15 @@ Route::prefix('admin')->group(function () {
         }
         return redirect()->route('admin.login');
     });
+    // Show Login Form
     Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+    // Handle Login Form Submission
     Route::post('/login', [AdminAuthController::class, 'login'])->name('admin.login.submit');
+    // Show Signup Form
     Route::get('/signup', [AdminAuthController::class, 'showSignupForm'])->name('admin.signup');
-    Route::post('/signup', [AdminAuthController::class, 'signup'])->name('admin.signup.submit');
+    // Handle Signup Form Submission
+    Route::post('/signup-submit', [AdminAuthController::class, 'signup'])->name('admin.signup.submit');
+    // Show Terms of Service
     Route::get('/terms', function () {
         return view('admin.terms');
     })->name('admin.terms');
@@ -45,9 +50,15 @@ Route::prefix('admin')->group(function () {
         // List views remain in AdminDashboardController
         Route::get('/employee-list', [AdminDashboardController::class, 'employeeList'])->name('admin.employee-list');
         Route::get('/company-list', [AdminDashboardController::class, 'companyList'])->name('admin.company-list');
+        // CompanyStatus Update
         Route::get('/companies/{id}/status-update', [AdminDashboardController::class, 'statusUpdate'])->name('admin.companies.status-update');
+        // Company Details Update
+        Route::put('/companies/{id}', [AdminDashboardController::class, 'updateCompany'])->name('admin.companies.update');
+        // Company Add
+        Route::post('/companies', [AdminDashboardController::class, 'storeCompany'])->name('admin.companies.store');
+
         // Company routes using CompanyController
-        Route::get('/companies/{id}/edit', [CompanyController::class, 'edit'])->name('admin.companies.edit');
+        // Route::get('/companies/{id}/edit', [CompanyController::class, 'edit'])->name('admin.companies.edit');
         // Route::put('/companies/{id}', [CompanyController::class, 'update'])->name('admin.companies.update');
         
         // Employee routes using EmployeeController
@@ -60,7 +71,6 @@ Route::prefix('admin')->group(function () {
 
         // Add question list route
         Route::get('/question-list', [AdminDashboardController::class, 'questionList'])->name('admin.question-list');
-        Route::put('/companies/{id}', [AdminDashboardController::class, 'updateCompany'])->name('admin.companies.update');
 
     });
 });

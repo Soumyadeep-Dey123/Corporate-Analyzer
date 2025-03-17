@@ -11,7 +11,7 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $company = CompanyMaster::findOrFail($id);
-        return view('admin.companies.edit', compact('company'));
+        return view('admin.sections.company.company-modal', compact('company'));
     }
 
     public function update(Request $request, $id)
@@ -22,7 +22,7 @@ class CompanyController extends Controller
             'company_name' => 'required|string|max:255',
             'company_email' => 'required|email|max:255',
             'company_phone' => 'required|string|max:20',
-            'status' => 'required|in:0,1',
+            'company_address' => 'required|string|max:255',
         ]);
 
         $company->update($validated);
