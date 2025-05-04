@@ -28,8 +28,8 @@
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
                         <select class="form-control" id="status" name="status" required>
-                            <option value=0>Active</option>
-                            <option value=1>Inactive</option>
+                            <option value=1>Active</option>
+                            <option value=0>Inactive</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary">Add Company</button>

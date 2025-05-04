@@ -44,35 +44,48 @@ Route::prefix('admin')->group(function () {
 
     // Protected routes (require admin authentication)
     Route::middleware('admin')->group(function () {
-        // Dashboard routes
+
+        // ==================|DASHBOARD ROUTES|==================
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 
-        // List views remain in AdminDashboardController
+        // List Views
         Route::get('/employee-list', [AdminDashboardController::class, 'employeeList'])->name('admin.employee-list');
         Route::get('/company-list', [AdminDashboardController::class, 'companyList'])->name('admin.company-list');
+        Route::get('/question-list', [AdminDashboardController::class, 'questionList'])->name('admin.question-list');
+        Route::get('/report', [AdminDashboardController::class, 'showReport'])->name('admin.report');
+
+
+        // ==================|COMPANY ROUTES|==================
         // CompanyStatus Update
-        Route::get('/companies/{id}/status-update', [AdminDashboardController::class, 'statusUpdate'])->name('admin.companies.status-update');
+        Route::get('/companies/{id}/status-update', [AdminDashboardController::class, 'companyStatusUpdate'])->name('admin.companies.status-update');
         // Company Details Update
         Route::put('/companies/{id}', [AdminDashboardController::class, 'updateCompany'])->name('admin.companies.update');
         // Company Add
-        Route::post('/companies', [AdminDashboardController::class, 'storeCompany'])->name('admin.companies.store');
+        Route::post('/companies-store', [AdminDashboardController::class, 'storeCompany'])->name('admin.companies.store');
 
         // Company routes using CompanyController
         // Route::get('/companies/{id}/edit', [CompanyController::class, 'edit'])->name('admin.companies.edit');
         // Route::put('/companies/{id}', [CompanyController::class, 'update'])->name('admin.companies.update');
-        
+
+
+        // ==================|EMPLOYEE ROUTES|==================
+
+        // Employee Add
+        Route::post('/employee-store', [AdminDashboardController::class, 'storeEmployee'])->name('admin.employee.store');
+
+        // EmployeeStatus Update
+        Route::post('/employees/status-update', [AdminDashboardController::class, 'employeeStatusUpdate'])->name('admin.employees.status-update');
+        Route::post('/employees/survey-status-update', [AdminDashboardController::class, 'employeeSurveyStatusUpdate'])->name('admin.employees.survey-status-update');
+
         // Employee routes using EmployeeController
         Route::get('/employees/{id}/edit', [EmployeeController::class, 'edit'])->name('admin.employees.edit');
         Route::put('/employees/{id}', [EmployeeController::class, 'update'])->name('admin.employees.update');
 
+
+
+        // ==================LOGOUT==================
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
-        // Add reports route
-        Route::get('/report', [AdminDashboardController::class, 'showReport'])->name('admin.report');
-
-        // Add question list route
-        Route::get('/question-list', [AdminDashboardController::class, 'questionList'])->name('admin.question-list');
-
     });
 });
 
-#company_logo add
+// company_logo add
