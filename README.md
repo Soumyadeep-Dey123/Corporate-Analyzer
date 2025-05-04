@@ -197,7 +197,7 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). -->
 ## 📄 License
 
 This project is licensed under the **Corporate Analyser Non-Commercial License (CANCL) - see the [LICENSE](docs/LICENSE.md) file for details**.  
-**Commercial use requires a separate license.** Contact the [author](#contact) for details.
+**Commercial use requires a separate license.** Contact the [author]((https://github.com/Soumyadeep-Dey123)) for details.
 
 ## 📞 Contact
 
