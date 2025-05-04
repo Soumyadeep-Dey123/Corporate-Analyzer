@@ -23,7 +23,7 @@ A brief description of your project. Explain what problem it solves and what mak
 - [Contributing](#contributing)
 - [Roadmap](#roadmap)
 - [License](#license)
-- [Contact](#contact)
+- [Contact](#-contact)
 
 ## ✨ Features
 
