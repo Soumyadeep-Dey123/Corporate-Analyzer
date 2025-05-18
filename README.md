@@ -211,14 +211,14 @@ Project Link: [https://github.com/Soumyadeep-Dey123/Corporate-Analyzer.git](http
 
 ## 📸 Snapshots
 ### Sneakpeak of the Landing Page
-![alt text](docs\snapshots\landing-bottom.png)
+![alt text](docs/snapshots/landing-bottom.png)
 
 ### Sneakpeak of the Admin Panel
-![alt text](docs\snapshots\Snapshot-admin-menu.png)
+![alt text](docs/snapshots/Snapshot-admin-menu.png)
 
 ### Company List (Admin Panel)
-![alt text](docs\snapshots\company-master-details.png)
+![alt text](docs/snapshots/company-master-details.png)
 
 ### Employee List (Admin Panel)
-![alt text](docs\snapshots\employee-list.png)
+![alt text](docs/snapshots/employee-list.png)
 
