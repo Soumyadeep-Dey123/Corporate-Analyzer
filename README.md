@@ -11,14 +11,14 @@ A brief description of your project. Explain what problem it solves and what mak
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [Demo](#-demo)
+<!-- - [Demo](#-demo) -->
 - [Requirements](#-requirements)
 - [Installation](#-installation)
 - [Environment Setup](#-environment-setup)
 - [Usage](#-usage)
-- [API Documentation](#-api-documentation)
+<!-- - [API Documentation](#-api-documentation)
 - [Testing](#-testing)
-- [Deployment](#-deployment)
+- [Deployment](#-deployment) -->
 - [Project Structure](#-project-structure)
 - [Contributing](#-contributing)
 - [Roadmap](#-roadmap)
@@ -32,12 +32,12 @@ A brief description of your project. Explain what problem it solves and what mak
 - **Feature 2**: Brief description
 - **Feature 3**: Brief description
 
-## 🚀 Demo
+<!-- ## 🚀 Demo
 
 If available, add:
 - Link to live demo
 - Screenshots or GIFs showcasing the application
-- Link to video demonstration
+- Link to video demonstration -->
 
 ## 📋 Requirements
 
@@ -116,7 +116,7 @@ php artisan serve
 # php artisan queue:work
 # php artisan schedule:run -->
 
-Include screenshots or code examples showing how to use main features.
+<!-- Include screenshots or code examples showing how to use main features. -->
 
 <!-- ## 📚 API Documentation
 
