@@ -24,6 +24,7 @@ A brief description of your project. Explain what problem it solves and what mak
 - [Roadmap](#-roadmap)
 - [License](#-license)
 - [Contact](#-contact)
+- [Snapshots](#-snapshots)
 
 ## ✨ Features
 
@@ -110,10 +111,10 @@ Provide instructions and examples:
 # Command to run the application
 php artisan serve
 
-# # Other common commands
-# php artisan queue:work
-# php artisan schedule:run
 ```
+<!-- # # Other common commands
+# php artisan queue:work
+# php artisan schedule:run -->
 
 Include screenshots or code examples showing how to use main features.
 
@@ -207,3 +208,17 @@ This project is licensed under the **Corporate Analyser Non-Commercial License (
 Mail - dey.soumyadeep123@gmail.com
 
 Project Link: [https://github.com/Soumyadeep-Dey123/Corporate-Analyzer.git](https://github.com/Soumyadeep-Dey123/Corporate-Analyzer.git)
+
+## 📸 Snapshots
+### Sneakpeak of the Landing Page
+![alt text](docs\snapshots\landing-bottom.png)
+
+### Sneakpeak of the Admin Panel
+![alt text](docs\snapshots\Snapshot-admin-menu.png)
+
+### Company List (Admin Panel)
+![alt text](docs\snapshots\company-master-details.png)
+
+### Employee List (Admin Panel)
+![alt text](docs\snapshots\employee-list.png)
+
