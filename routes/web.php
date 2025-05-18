@@ -18,7 +18,17 @@ use App\Http\Controllers\Admin\EmployeeController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
+
+Route::get('/demo', function () {
+    return view('demo');
+})->name('demo');
+
+Route::get('/team', function () {
+    return view('team');
+})->name('team');
+
+Route::get('/report', [AdminDashboardController::class, 'showReport'])->name('admin.report');
 
 Route::prefix('admin')->group(function () {
     // Public routes
@@ -63,6 +73,8 @@ Route::prefix('admin')->group(function () {
         // Company Add
         Route::post('/companies-store', [AdminDashboardController::class, 'storeCompany'])->name('admin.companies.store');
 
+        // Filter Company
+        Route::post('/filter-company-users', [AdminDashboardController::class, 'filterCompanyUsers'])->name('filter.company.users');
         // Company routes using CompanyController
         // Route::get('/companies/{id}/edit', [CompanyController::class, 'edit'])->name('admin.companies.edit');
         // Route::put('/companies/{id}', [CompanyController::class, 'update'])->name('admin.companies.update');
@@ -83,7 +95,7 @@ Route::prefix('admin')->group(function () {
 
 
 
-        // ==================LOGOUT==================
+        // ======================|LOGOUT|======================
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
     });
 });

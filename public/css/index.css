@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 /* Main CSS Variables */
 :root {
   --primary: #0EA5E9;

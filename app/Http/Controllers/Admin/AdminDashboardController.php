@@ -103,6 +103,24 @@ class AdminDashboardController extends Controller
         return redirect()->route('admin.company-list')->with('success', 'Company added successfully!');
     }
 
+    // Filter company users
+    public function filterCompanyUsers(Request $request)
+    {
+        $companyIds = $request->input('companies', []);
+
+        $users = CompanyUser::query()
+            ->when(!empty($companyIds), function ($query) use ($companyIds) {
+                return $query->whereIn('company_id', $companyIds);
+            })
+            ->with('company')
+            ->get();
+
+        return response()->json([
+            'users' => $users,
+            'success' => true
+        ]);
+    }
+
     // !=========================================|EMPLOYEE ROUTES|==========================================!
 
     // Store employee details

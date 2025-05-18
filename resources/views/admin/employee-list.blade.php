@@ -47,8 +47,8 @@
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Company</th>
-                                            <th align="center" >Account Status</th>
-                                            <th align="center" >Survey Status</th>
+                                            <th align="center">Account Status</th>
+                                            <th align="center">Survey Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -82,7 +82,7 @@
                                                         class="company-status fa-solid fa-{{ $status_icon }}"
                                                         title="{{ $status_title }}" data-bs-toggle="modal"
                                                         data-bs-target="#changeStatusModal"
-                                                        data-employee-id="{{ $employee->id }}"
+                                                        data-employee-id-status="{{ $employee->id }}"
                                                         data-current-status="{{ $employee->account_status }}"
                                                         data-current-text="{{ $status_text }}"></i>
                                                 </td>
@@ -131,6 +131,7 @@
 @section('js-files')
     <script src="{{ asset('datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('js/admin/initiate-datatables.js') }}"></script>
+    {{-- <script src="{{ asset('js/admin/employee.js') }}"></script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // jQuery functions
@@ -166,7 +167,7 @@
             // When the modal is triggered, populate it with employee data
             $('#changeStatusModal').on('show.bs.modal', function(event) {
                 var button = $(event.relatedTarget); // Button that triggered the modal
-                var employeeId = button.data('employee-id'); // Extract employee ID
+                var employeeId = button.data('employee-id-status'); // Extract employee ID
                 var currentStatus = button.data('current-status'); // Extract current status
                 var currentStatusText = button.data('current-text'); // Extract current status text
 
@@ -193,7 +194,7 @@
                     success: function(response) {
                         if (response.success) {
                             // Update the icon and status in the table
-                            var row = $('i[data-employee-id="' + employeeId + '"]');
+                            var row = $('i[data-employee-id-status="' + employeeId + '"]');
                             var newIcon, newColor, newText;
 
                             if (newStatus == 1) {
@@ -240,9 +241,9 @@
                 var button = $(event.relatedTarget); // Button that triggered the modal
                 var employeeId = button.data('employee-id'); // Extract employee ID
                 var currentSurveyStatus = button.data(
-                'current-survey-status'); // Extract current survey status
+                    'current-survey-status'); // Extract current survey status
                 var currentSurveyStatusText = button.data(
-                'current-survey-text'); // Extract current survey status text
+                    'current-survey-text'); // Extract current survey status text
 
                 // Update modal content
                 var modal = $(this);

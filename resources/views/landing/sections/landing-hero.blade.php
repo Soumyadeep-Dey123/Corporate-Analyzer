@@ -10,7 +10,7 @@
                     survey platform designed for modern workplaces.</p>
                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
                     <button class="btn btn-primary btn-lg">Start Free Trial</button>
-                    <button class="btn btn-outline-secondary btn-lg">Request Demo</button>
+                    <button class="btn btn-outline-secondary btn-lg" href="/demo">Request Demo</button>
                 </div>
             </div>
             <div class="col-lg-6">

@@ -110,9 +110,9 @@ Provide instructions and examples:
 # Command to run the application
 php artisan serve
 
-# Other common commands
-php artisan queue:work
-php artisan schedule:run
+# # Other common commands
+# php artisan queue:work
+# php artisan schedule:run
 ```
 
 Include screenshots or code examples showing how to use main features.
@@ -127,7 +127,7 @@ If your project has an API, include:
 
 For detailed API documentation, see [API.md](docs/API.md). -->
 
-## 🧪 Testing (not recommended)
+<!-- ## 🧪 Testing (not recommended)
 
 Explain how to run the test suite:
 
@@ -137,9 +137,9 @@ php artisan test
 
 # Run specific test suite
 php artisan test --filter=UserTest
-```
+``` -->
 
-## 🚢 Deployment
+<!-- ## 🚢 Deployment
 
 Provide instructions for deploying to production:
 
@@ -157,7 +157,7 @@ Provide instructions for deploying to production:
 4. Environment Optimization:
    - Caching configuration (php artisan config:cache)
    - Caching routes (php artisan route:cache)
-   - Optimizing Composer (composer install --optimize-autoloader --no-dev)
+   - Optimizing Composer (composer install --optimize-autoloader --no-dev) -->
 
 ## 📁 Project Structure
 
@@ -190,6 +190,9 @@ For detailed guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md). -->
 
 - [x] Creation of Admin Panel
 - [x] Addition of working features in the Admin Panel
+- [x] Creation of Landing page 
+- [x] Creation of Frontend for User Interaction and Project Description
+- [ ] Inclusion of User Request Form
 - [ ] Creation of Survey Form
 - [ ] Publishing version 1.0.0
 - [ ] Working on version 1.1.0

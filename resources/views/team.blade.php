@@ -10,14 +10,7 @@
 
 @section('body')
     @include('landing.sections.landing-navbar')
-    @include('landing.sections.landing-hero')
-    @include('landing.sections.landing-stats')
-    @include('landing.sections.landing-slider')
-    @include('landing.sections.landing-features')
-    @include('landing.sections.landing-pricing')
-    @include('landing.sections.landing-about')
-    @include('landing.sections.landing-testimonials')
-    @include('landing.sections.landing-contact')
+    @include('landing.sections.landing-team')
     @include('landing.sections.landing-footer')
 
     <!-- Back to Top Button -->
