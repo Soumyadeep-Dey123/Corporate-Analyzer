@@ -26,11 +26,13 @@ A brief description of your project. Explain what problem it solves and what mak
 - [Contact](#-contact)
 - [Snapshots](#-snapshots)
 
-## ✨ Features
+## ✨ Features (in Development)
 
-- **Feature 1**: Brief description
-- **Feature 2**: Brief description
-- **Feature 3**: Brief description
+- **Feature 1**: Run surveys in the most efficient way possible
+- **Feature 2**: Run custom surveys for your company
+- **Feature 3**: Made for convenience
+- **Feature 4**: Admin Panel for managing the application
+- **Feature 5**: Beautiful UI 
 
 <!-- ## 🚀 Demo
 
