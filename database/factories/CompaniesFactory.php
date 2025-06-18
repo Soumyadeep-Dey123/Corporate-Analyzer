@@ -17,7 +17,10 @@ class CompaniesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'company_name'     => $this->faker->unique()->company(),          // e.g. “Globex Corporation”
+            'company_email'    => $this->faker->unique()->companyEmail(),     // e.g. “info@globex.com”
+            'company_phone'    => $this->faker->numerify('+1-###-###-####'),  // e.g. “+1‑555‑867‑5309”
+            'company_location' => $this->faker->city() . ', ' . $this->faker->state(), // e.g. “Austin, Texas”
         ];
     }
 }

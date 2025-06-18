@@ -5,7 +5,8 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Response as ResponseModel; // alias to avoid the Policy clash
 use App\Models\answers;
-use App\Models\questions;
+use App\Models\questions as Question;
+use App\Models\Response;
 
 
 /**
@@ -23,9 +24,10 @@ class AnswersFactory extends Factory
     public function definition(): array
     {
         return [
-            'response_id' => ResponseModel::factory(),        // create parents on the fly :contentReference[oaicite:5]{index=5}
-            'question_id' => Questions::factory(),
-            'answer'      => $this->faker->sentence(),        // or ->paragraph()
+            'response_id' => Response::factory(),                // parent on‑the‑fly
+            'question_id' => Question::query()->inRandomOrder()  // pick existing question
+                                  ->value('id') ?? Question::factory(),
+            'answer'      => $this->faker->sentence(),
         ];
     }
 }

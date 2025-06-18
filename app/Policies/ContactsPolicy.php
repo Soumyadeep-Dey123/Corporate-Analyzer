@@ -13,7 +13,7 @@ class ContactsPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class ContactsPolicy
      */
     public function view(User $user, contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class ContactsPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class ContactsPolicy
      */
     public function update(User $user, contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -45,7 +45,7 @@ class ContactsPolicy
      */
     public function delete(User $user, contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class ContactsPolicy
      */
     public function restore(User $user, contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -61,6 +61,6 @@ class ContactsPolicy
      */
     public function forceDelete(User $user, contacts $contacts): bool
     {
-        return false;
+        return true;
     }
 }
