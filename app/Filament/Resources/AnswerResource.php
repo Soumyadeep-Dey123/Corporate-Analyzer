@@ -61,10 +61,10 @@ class AnswerResource extends Resource
                     ->searchable(),
             ])->filters([
                 //
-            ])->headerActions([
-                Tables\Actions\CreateAction::make(),
-            ])
-            ->filters([
+            // ])->headerActions([
+            //     Tables\Actions\CreateAction::make(),
+            // ])
+            // ->filters([
                 //
             ])
             ->actions([
