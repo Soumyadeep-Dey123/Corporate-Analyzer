@@ -26,8 +26,8 @@ class EmployeesResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('company_name')
-                    ->label('Company Name')
+                TextInput::make('company_id')
+                    ->label('Company ID')
                     ->required()
                     ->maxLength(255),
                 TextInput::make('employee_name')
@@ -44,7 +44,7 @@ class EmployeesResource extends Resource
                     ->tel()
                     ->required()
                     ->maxLength(20),
-                
+
             ]);
     }
 
@@ -56,8 +56,8 @@ class EmployeesResource extends Resource
                     ->label('ID')
                     ->sortable()
                     ->searchable(),
-                TextColumn::make('company_name')
-                    ->label('Company Name')
+                TextColumn::make('company_id')
+                    ->label('Company ID')
                     ->sortable()
                     ->searchable(),
                 TextColumn::make('employee_name')
